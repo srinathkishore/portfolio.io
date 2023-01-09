@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Imprima&display=swap");
+
+* {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: #131313;
+  overflow: hidden;
+  font-family: "Imprima", sans-serif;
+}
+
+.content {
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+section {
+  flex: none;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#about {
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: justify;
+}
+
+#works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#title {
+  transition: all 1s ease-in-out;
+}
+#title h1 {
+  font-size: 90px;
+}
+
+#caption {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#title:hover {
+  cursor: default;
+  text-shadow: 0px 0px 10px aqua;
+  transform: scale(1.2);
+}
+
+#title:hover #caption {
+  opacity: 1;
+}
+
+#links {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 10vh;
+}
+
+#links a {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+}
+
+#links a:hover {
+  font-size: 25px;
+  text-shadow: 0px 0px 25px aqua;
+}
+
+#home-btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  width: 50px;
+  height: 50px;
+}
+
+#home-btn:hover i {
+  box-shadow: 2px 4px 4px aqua;
+  transform: scale(1.1);
+}
+
+#btn i {
+  display: flex;
+  justify-content: center;
+  transform: scale(2);
+  position: absolute;
+  bottom: 50px;
+  width: 35px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+#btn i:hover {
+  bottom: 52px;
+  box-shadow: 2px 4px 4px aqua;
+}
+
+#left {
+  left: 50px;
+}
+
+#right {
+  right: 50px;
+}
+
+#home-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#contact-opts {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: scale(1.5);
+}
+
+.fa-brands {
+  transition: all 0.5s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: scale(1.2);
+}
