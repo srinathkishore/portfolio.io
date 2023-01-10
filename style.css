@@ -168,3 +168,17 @@ section {
   font-size: 25px;
   text-shadow: 0px 0px 10px var(--shade);
 }
+
+@media (max-width: 840px) {
+  * {
+    font-size: 15px;
+  }
+
+  #title h1 {
+    font-size: 50px;
+  }
+
+  #btn i {
+    font-size: 25px;
+  }
+}
