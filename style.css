@@ -94,7 +94,8 @@ h4 {
 .about {
   width: 80vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2vw;
 }
 
 .edu {
@@ -195,7 +196,7 @@ h4 {
   right: 5vw;
 }
 
-@media (min-width: 300px) and (max-width: 840px) {
+@media (min-width: 300px) and (max-width: 650px) {
   * {
     font-size: 15px;
   }
