@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Imprima&display=swap");
 
+/* ---- Variables ----*/
 :root {
   --clr: #fff;
   --bg: #131313;
-  --shade: rgb(0, 127, 255);
+  --shade: aqua;
 }
 
 * {
   color: var(--clr);
-  text-decoration: none;
   font-size: 20px;
   transition: all 0.5s ease-in-out;
 }
@@ -18,11 +18,10 @@ a {
 }
 
 body {
-  height: 100vh;
   width: 100vw;
   padding: 0;
   margin: 0;
-  background-color: #131313;
+  background-color: var(--bg);
   overflow: hidden;
   font-family: "Imprima", sans-serif;
 }
@@ -42,6 +41,14 @@ section {
   scroll-snap-align: start;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: var(--shade);
+}
+
+/* ---- Home Page ---- */
 #home {
   display: flex;
   flex-direction: column;
@@ -50,52 +57,10 @@ section {
   position: relative;
 }
 
-#about {
-  padding: 0 8vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: justify;
-}
-
-#works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-}
-
-#title {
-  transition: all 1s ease-in-out;
-}
 #title h1 {
+  color: var(--clr);
   font-size: 90px;
-}
-
-#caption {
-  opacity: 0;
-  transition: all 1s ease-in-out;
-}
-
-#title:hover {
-  cursor: default;
-  text-shadow: 0px 0px 10px var(--shade);
-  transform: scale(1.2);
-}
-
-#title:hover #caption {
-  opacity: 1;
+  text-shadow: 0px 0px 25px var(--shade);
 }
 
 #links {
@@ -107,15 +72,97 @@ section {
 }
 
 #links a {
-  color: #fff;
+  color: var(--clr);
   text-decoration: none;
 }
 
 #links a:hover {
   font-size: 25px;
-  text-shadow: 0px 0px 20px var(--shade);
+  color: var(--shade);
 }
 
+/* ---- About Page ----*/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about {
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.edu {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.vl {
+  width: 1px;
+  height: 100%;
+  background-color: gray;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+}
+
+.skill-bar-container {
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;
+  background-color: rgb(100, 100, 100);
+}
+
+.skill-bar {
+  height: 15px;
+  width: calc(var(--skill) * 1%);
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+  transition: width 10s;
+}
+
+/* ---- My Works Page ----*/
+#works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ---- Contact Page ---- */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#social {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: scale(1.5);
+}
+
+#social i:hover {
+  font-size: 25px;
+  color: var(--shade);
+}
+
+/* ----Buttons---- */
 #home-btn {
   position: absolute;
   top: 5vh;
@@ -123,7 +170,7 @@ section {
 }
 
 #home-btn:hover i {
-  text-shadow: 0px 0px 25px var(--shade);
+  color: var(--shade);
 }
 
 #btn i {
@@ -137,7 +184,7 @@ section {
 }
 
 #btn i:hover {
-  text-shadow: 0px 0px 15px var(--shade);
+  color: var(--shade);
 }
 
 #left {
@@ -148,19 +195,6 @@ section {
   right: 5vw;
 }
 
-#social {
-  display: flex;
-  width: 50vw;
-  align-items: center;
-  justify-content: space-evenly;
-  transform: scale(1.5);
-}
-
-#social i:hover {
-  font-size: 25px;
-  text-shadow: 0px 0px 10px var(--shade);
-}
-
 @media (min-width: 300px) and (max-width: 840px) {
   * {
     font-size: 15px;
@@ -169,10 +203,6 @@ section {
   #title h1 {
     font-size: 50px;
     text-shadow: 0px 0px 25px var(--shade);
-  }
-
-  #title:hover {
-    transform: none;
   }
 
   #btn i {
@@ -187,11 +217,6 @@ section {
   #social {
     flex-direction: column;
     height: 50vh;
-  }
-
-  *:hover {
-    box-shadow: none;
-    text-shadow: none;
   }
 
   #caption {
@@ -232,5 +257,10 @@ section {
       -webkit-transform: translateX(-100px);
       transform: translateX(-100px);
     }
+  }
+
+  *:hover {
+    box-shadow: none;
+    text-shadow: none;
   }
 }
