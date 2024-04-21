@@ -2,199 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Srinath Kishore</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
     />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://kit.fontawesome.com/e4f97ef637.js"
-      crossorigin="anonymous"
-    ></script>
-
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
-  <body class="slide-left">
-    <div class="content">
-      <section id="home">
-        <div id="links">
-          <a href="#about">About</a>
-          <a href="#works">My Works</a>
-          <a href="#contact">Contact</a>
+  <body>
+    <div class="welcome-animation">
+      <h1>Welcome!</h1>
+    </div>
+
+    <div class="container page-border">
+      <div id="links">
+        <p id="home-link">Home</p>
+        <p id="about-link">About</p>
+        <p id="contact-link">Contact</p>
+        <div id="toggle-btn">
+          <i class="fas fa-sun" id="light-icon"></i>
+          <i class="fas fa-moon" id="dark-icon"></i>
         </div>
+      </div>
+      <div id="home-page" class="page">
+        <h1>Srinath Kishore</h1>
+        <h3>Web Designer & Developer</h3>
+      </div>
 
-        <div id="title">
-          <h1>Srinath Kishore</h1>
-          <p id="caption">Web Designer & Developer | CSE Undergrad</p>
+      <div id="about-page" class="page">
+        <div><h1>About Me</h1></div>
+
+        <div>
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            Tech enthusiast with extreme interest in keeping myself updated with
-            emerging tech
-          </li>
-          <li>Quick learner with efficient execution</li>
-          <li>TRF Chairman of the Rotaract club of HICET</li>
-        </ul>
-
-        <div class="nav">
-          <a href="#about" id="btn">
-            <i class="fa-solid fa-right-long pulse" id="right"></i>
-          </a>
+        <hr />
+        <div>
+          If you are a recruiter, look at my
+          <a href="CV.pdf" id="CV" download>CV</a> for a detailed version of my
+          info.
         </div>
-      </section>
+      </div>
 
-      <section class="container-fluid" id="about">
-        <div class="about">
-          <div class="edu">
-            <h3>Education</h3>
-            <dl>
-              <dt>SSLC</dt>
-              <dd>
-                Golden Gates Matric Higher Secondary School <br />
-                2017 - 2018 | Completed with 94.4%
-              </dd>
-              <dt>HSC</dt>
-              <dd>
-                Golden Gates Matric Higher Secondary School <br />
-                2019 - 2020 | Completed with 86.6%
-              </dd>
-              <dt>UG</dt>
-              <dd>
-                B.E Computer Science and Engineering <br />
-                Hindusthan College of Engineering and Technology <br />
-                2020 - 2024 | CGPA - 8.95
-              </dd>
-            </dl>
-          </div>
-          <div class="vl"></div>
-          <div class="skills">
-            <h4>Languages</h4>
-            <div class="skill">
-              HTML
-              <div class="skill-bar-container">
-                <div class="skill-bar animate" style="--skill: 90"></div>
-              </div>
-            </div>
-            <div class="skill">
-              CSS
-              <div class="skill-bar-container">
-                <div class="skill-bar animate" style="--skill: 90"></div>
-              </div>
-            </div>
-            <div class="skill">
-              JavaScript
-              <div class="skill-bar-container">
-                <div class="skill-bar animate" style="--skill: 80"></div>
-              </div>
-            </div>
-            <div class="skill">
-              Java
-              <div class="skill-bar-container">
-                <div class="skill-bar animate" style="--skill: 85"></div>
-              </div>
-            </div>
-            <div class="skill">
-              Python
-              <div class="skill-bar-container">
-                <div class="skill-bar animate" style="--skill: 80"></div>
-              </div>
-            </div>
-            <hr />
-            <h4>Qualities</h4>
-            <p>
-              - Leadership <br />
-              - Project Management <br />
-              - Perseverence
-            </p>
-          </div>
-        </div>
-
-        <div class="nav">
-          <a href="#home" id="btn">
-            <i class="fa-solid fa-left-long" id="left"></i>
-          </a>
-          <a href="#works" id="btn">
-            <i class="fa-solid fa-right-long pulse" id="right"></i>
-          </a>
-        </div>
-      </section>
-
-      <section id="works">
-        <div id="home-btn">
-          <a href="#home"><i class="fa-solid fa-house"></i></a>
-        </div>
-
-        <h1>My Works</h1>
-
-        <div class="nav">
-          <a href="#about" id="btn">
-            <i class="fa-solid fa-left-long" id="left"></i>
-          </a>
-
-          <a href="#contact" id="btn">
-            <i class="fa-solid fa-right-long" id="right"></i>
-          </a>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div id="home-btn">
-          <a href="#home"><i class="fa-solid fa-house"></i></a>
-        </div>
-
+      <div id="contact-page" class="page">
         <h1>Contact</h1>
         <div id="social">
+          <a href="mailto:srinathkishore.a@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
           <a href="tel:919626416635" target="_blank">
             <i class="fas fa-phone"></i>
           </a>
+
           <a href="https://wa.me/919626416635" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a
-            href="mailto: srinathkishore.a@gmail.com"
-            target="_blank"
-          >
-            <i class="fa-solid fa-envelope"></i>
-          </a>
+
           <a href="https://www.linkedin.com/in/srinathkishore/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
+
           <a href="https://www.facebook.com/srinath.kishore13/" target="_blank">
             <i class="fa-brands fa-facebook"></i>
           </a>
+
           <a href="https://www.instagram.com/srinath_kishore/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
+
           <a href="https://twitter.com/SrinathKishoreA" target="_blank">
             <i class="fa-brands fa-twitter"></i>
           </a>
+
           <a href="https://t.me/srinath_kishore" target="_blank">
             <i class="fa-brands fa-telegram"></i>
           </a>
         </div>
-        <div class="nav">
-          <a href="#works" id="btn">
-            <i class="fa-solid fa-left-long" id="left"></i>
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
   </body>
 </html>
