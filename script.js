@@ -12,6 +12,12 @@ const homePage = document.getElementById("home-page");
 const aboutPage = document.getElementById("about-page");
 const contactPage = document.getElementById("contact-page");
 
+window.onload = function(){
+  setTimeout(function(){
+    window.scrollTo(0, 1);
+  }, 0);
+}
+
 toggleBtn.addEventListener("click", () => {
   const isLightMode = body.classList.contains("light-mode");
   if (isLightMode) {
