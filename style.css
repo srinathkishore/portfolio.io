@@ -7,6 +7,8 @@
   --btn: #ce5a67;
   --bg-light: #f5f5f5;
   --txt-light: #090909;
+
+  --vh: 1vh;
 }
 
 * {
@@ -37,11 +39,14 @@ hr {
 body {
   background-color: var(--bg);
   color: var(--txt);
+  height: calc(100 * var(--vh));
+  margin: 0;
+  padding: 0;
 }
 
 .welcome-animation {
-  height: 100lvh;
-  width: 100lvw;
+  height: 100%;
+  width: 100%;
   display: grid;
   place-items: center;
   z-index: -100;
@@ -55,13 +60,13 @@ body {
 
 .page-border {
   position: absolute;
-  top: 2.5lvh;
-  left: 2.5lvw;
-  height: 95lvh;
-  width: 95lvw;
+  top: 2.5%;
+  left: 2.5%;
+  height: 95%;
+  width: 95%;
   z-index: -100;
   border: 1px solid var(--txt);
-  border-radius: 2lvh;
+  border-radius: 2%;
   box-shadow: 0 0 10px var(--txt);
 }
 
@@ -96,7 +101,7 @@ body {
   position: absolute;
   top: 3.5%;
   display: flex;
-  width: 70lvw;
+  width: 70%;
   justify-content: space-between;
   align-items: center;
 }
@@ -109,9 +114,9 @@ body {
 }
 
 .page {
-  padding: 0 10lvw;
+  padding: 0 10%;
   flex-direction: column;
-  gap: 2lvh;
+  gap: 2%;
 }
 
 #about-page,
