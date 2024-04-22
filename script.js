@@ -12,10 +12,6 @@ const homePage = document.getElementById("home-page");
 const aboutPage = document.getElementById("about-page");
 const contactPage = document.getElementById("contact-page");
 
-window.addEventListener("DOMContentLoaded", function() {
-      window.scrollTo(0, document.body.scrollHeight);
-});
-
 toggleBtn.addEventListener("click", () => {
   const isLightMode = body.classList.contains("light-mode");
   if (isLightMode) {
