@@ -73,16 +73,20 @@ body {
 #dark-icon {
   color: var(--txt-light);
   border: 2px solid var(--txt-light);
-  border-radius: 25%;
-  padding: 7px;
+
   display: none;
 }
 
 #light-icon {
   color: var(--txt);
   border: 2px solid var(--txt);
+}
+
+#light-icon,
+#dark-icon {
   border-radius: 25%;
   padding: 7px;
+  transition: all 0.3s ease-in-out;
 }
 
 #toggle-btn {
@@ -111,6 +115,7 @@ body {
   border-radius: 10px;
   padding: 7px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .page {
@@ -139,9 +144,13 @@ body {
   gap: 20px;
 }
 
+#social a {
+  transition: all 0.35s ease-in-out;
+}
 @media (max-width: 768px) {
   * {
     font-size: 14px;
+    user-select: none;
   }
 
   * h1 {
@@ -151,15 +160,26 @@ body {
   * h2 {
     font-size: 150%;
   }
-  
+  #home-page h1 {
+    font-size: 250%;
+  }
+
+  #home-page h3 {
+    font-size: x-large;
+  }
+
   #social * {
     font-size: x-large;
   }
 }
 
 @media (min-width: 769px) {
+  #links p:hover {
+    background-color: var(--txt);
+    color: var(--bg);
+  }
+
   #contact-page {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -170,5 +190,16 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+  }
+
+  #social a:hover {
+    scale: 1.2;
+    text-shadow: 0 0 10px var(--txt);
+  }
+
+  #light-icon:hover,
+  #dark-icon:hover {
+    background-color: var(--txt);
+    color: var(--bg);
   }
 }
