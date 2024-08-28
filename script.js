@@ -1,50 +1,55 @@
-const toggleBtn = document.getElementById("toggle-btn");
-const body = document.body;
-const root = document.documentElement;
-const lightIcon = document.getElementById("light-icon");
-const darkIcon = document.getElementById("dark-icon");
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('scroll-container');
+    const icons = document.querySelectorAll('.icon');
+    const sections = document.querySelectorAll('section');
 
-const homeLink = document.getElementById("home-link");
-const aboutLink = document.getElementById("about-link");
-const contactLink = document.getElementById("contact-link");
+    const updateActiveElements = () => {
+        const scrollPosition = container.scrollTop + window.innerHeight / 2;
+        let activeIndex = sections.length - 1;
 
-const homePage = document.getElementById("home-page");
-const aboutPage = document.getElementById("about-page");
-const contactPage = document.getElementById("contact-page");
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
 
-toggleBtn.addEventListener("click", () => {
-  const isLightMode = body.classList.contains("light-mode");
-  if (isLightMode) {
-    // Switch to dark mode
-    body.classList.remove("light-mode");
-    root.style.setProperty("--bg", "#090909");
-    root.style.setProperty("--txt", "#f5deb3");
-    lightIcon.style.display = "inline";
-    darkIcon.style.display = "none";
-  } else {
-    // Switch to light mode
-    body.classList.add("light-mode");
-    root.style.setProperty("--bg", "#f5f5f5");
-    root.style.setProperty("--txt", "#090909");
-    lightIcon.style.display = "none";
-    darkIcon.style.display = "inline";
-  }
-});
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                activeIndex = index;
+            }
+        });
 
-homeLink.addEventListener("click", () => {
-  homePage.style.display = "flex";
-  aboutPage.style.display = "none";
-  contactPage.style.display = "none";
-});
+        sections.forEach((section, index) => {
+            section.classList.toggle('active', index === activeIndex);
+        });
 
-aboutLink.addEventListener("click", () => {
-  homePage.style.display = "none";
-  aboutPage.style.display = "flex";
-  contactPage.style.display = "none";
-});
+        icons.forEach((icon, index) => {
+            icon.classList.toggle('active', index === activeIndex);
+        });
+    };
 
-contactLink.addEventListener("click", () => {
-  homePage.style.display = "none";
-  aboutPage.style.display = "none";
-  contactPage.style.display = "flex";
+    container.addEventListener('scroll', updateActiveElements);
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            const targetSection = document.getElementById(e.target.dataset.section);
+            container.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    updateActiveElements();
+
+    const descriptionElement = document.getElementById('description');
+    const text = "A passionate developer and technology enthusiast";
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            descriptionElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 70);
+        }
+    }
+
+    typeWriter();
 });

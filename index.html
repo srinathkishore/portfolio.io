@@ -1,104 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srinath Kishore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="welcome-animation">
-      <h1>Welcome!</h1>
+</head>
+
+<body>
+    <div class="warning-screen">
+        <img src="https://media.giphy.com/media/S3thLnRWEpRwq6iDIO/giphy.gif?cid=ecf05e4775mbauzemlp0h0d7byav69j3bufh0rtinp2dtnwp&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Sorry for your inconvenience">
+        <div class="warning-content">
+            <h1>Page Not Optimized</h1>
+            <p>This page is still not optimized for smaller screen sizes.</p>
+            <p>Please open it on a wider screen or try again after some days.</p>
+        </div>
     </div>
-
-    <div class="container page-border">
-      <div id="links">
-        <p id="home-link">Home</p>
-        <p id="about-link">About</p>
-        <p id="contact-link">Contact</p>
-        <div id="toggle-btn">
-          <i class="fas fa-sun" id="light-icon"></i>
-          <i class="fas fa-moon" id="dark-icon"></i>
+    <div id="progress-icons-container">
+        <div id="progress-icons">
+            <i class="icon fas fa-home" data-section="home"></i>
+            <i class="icon fas fa-user" data-section="about"></i>
+            <i class="icon fas fa-graduation-cap" data-section="qualification"></i>
+            <i class="icon fas fa-folder-open" data-section="projects"></i>
         </div>
-      </div>
-      <div id="home-page" class="page">
-        <h1>Srinath Kishore</h1>
-        <h3>Web Designer & Developer</h3>
-      </div>
-
-      <div id="about-page" class="page">
-        <div><h1>About Me</h1></div>
-        <br />
-        <div>
-          <h2>Skills</h2>
-          <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>Java</li>
-          </ul>
-        </div>
-        <br />
-        <hr />
-        <br />
-        <div>
-          If you are a recruiter, look at my
-          <a href="CV.pdf" id="CV" download>CV</a> for a detailed version of my
-          info.
-        </div>
-      </div>
-
-      <div id="contact-page" class="page">
-        <h1>Contact</h1>
-        <br />
-        <div id="social">
-          <a href="mailto:srinathkishore.a@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-
-          <a href="tel:919626416635" target="_blank">
-            <i class="fas fa-phone"></i>
-          </a>
-
-          <a href="https://wa.me/919626416635" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/srinathkishore/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-
-          <a href="https://www.facebook.com/srinath.kishore13/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-
-          <a href="https://www.instagram.com/srinath_kishore/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://twitter.com/SrinathKishoreA" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-
-          <a href="https://t.me/srinath_kishore" target="_blank">
-            <i class="fa-brands fa-telegram"></i>
-          </a>
-        </div>
-      </div>
     </div>
-  </body>
+    <div id="scroll-container">
+        <section id="home">
+            <div id="personal-info">
+                <h1 id="name">Srinath Kishore</h1>
+                <h2>Software Developer</h2>
+                <p id="description"></p>
+                <div id="social">
+                    <a href="https://github.com/SrinathKishore" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/srinathkishore/" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/SrinathKishoreA" target="_blank" title="Twitter (X)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://wa.me/919626416635" target="_blank" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:srinathkishore.a@gmail.com" target="_blank" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/srinath_kishore/" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="photo">
+                <img src="IMG.JPG" alt="">
+            </div>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+        </section>
+        <section id="qualification">
+            <div id="education-experience-container">
+                <div id="education">
+                    <h1>Education</h1>
+                    <div class="education-item">
+                        <p><b>B.E Computer Science and Engineering</b> | 2020 - 2024</p>
+                        <p>Hindusthan College of Engineering and Technology</p>
+                        <p>Grade: 8.95</p>
+                    </div><br>
+                    <div class="education-item">
+                        <p><b>HSC</b> | 2019 - 2020</p>
+                        <p>Golden Gates Matric. Hr. Sec. School</p>
+                        <p>Score: 520/600</p>
+                    </div><br>
+                    <div class="education-item">
+                        <p><b>SSLC</b> | 2017 - 2018</p>
+                        <p>Golden Gates Matric. Hr. Sec. School</p>
+                        <p>Score: 472/500</p>
+                    </div><br>
+                </div>
+                <div id="experience">
+                    <h1>Experience</h1>
+                    <div class="experience-item">
+                        <p><b>Software Developer</b> | Jun 2024 - Present</p>
+                        <p>Greeno Tech Solutions Pvt Ltd</p>
+                        <p>Responsibilities:</p>
+                        <ul>
+                            <li>Developed and customized ERP solutions using Infor software to meet specific business
+                                needs.</li>
+                            <li>Provided technical support and troubleshooting for ERP systems, ensuring efficient
+                                operations for end-users.</li>
+                            <li>Collaborated with cross-functional teams to gather requirements, design, and implement
+                                scalable ERP solutions.</li>
+                            <li>Maintained and updated ERP systems to accommodate changes in business processes and
+                                ensure compliance with industry standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+        </section>
+    </div>
+</body>
+
 </html>
