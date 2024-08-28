@@ -14,7 +14,7 @@ html {
     font-family: Arial, sans-serif;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 980px) {
     body {
         display: flex;
     }
@@ -31,6 +31,10 @@ html {
         text-wrap: nowrap;
     }
 
+    p {
+        text-align: justify;
+    }
+
     #progress-icons-container {
         height: 100vh;
         width: 7vw;
@@ -45,7 +49,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         border: 2px solid rgba(255, 255, 255, 0.5);
         border-radius: 10px;
     }
@@ -124,40 +128,6 @@ html {
         object-fit: cover;
     }
 
-    #qualification {
-        justify-content: space-evenly;
-    }
-
-    #qualification b {
-        color: var(--title);
-    }
-
-    #experience {
-        width: 40%;
-        text-align: justify;
-    }
-
-    #experience li {
-        line-height: 1.5;
-    }
-
-    #education-experience-container {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        gap: 2vw;
-        margin-top: 20px;
-    }
-
-    #education,
-    #experience {
-        flex: 1;
-        max-width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
     #social {
         font-size: x-large;
         display: flex;
@@ -177,6 +147,56 @@ html {
     #social a:hover {
         opacity: 1;
     }
+
+    #about-content {
+        width: 80vw;
+    }
+
+    #about h2 {
+        margin-bottom: -1%;
+    }
+
+    #about p,
+    li {
+        line-height: 1.6;
+    }
+
+    #qualification {
+        justify-content: space-evenly;
+    }
+
+    #education-item p{
+        line-height: 0.5;
+    }
+
+    #experience {
+        width: 40%;
+        text-align: justify;
+    }
+
+    #experience h3, .education-item h3{
+        margin-bottom: -1%;
+    }
+
+    #experience li {
+        line-height: 1.5;
+    }
+
+    #education-experience-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2vw;
+    }
+
+    #education,
+    #experience {
+        flex: 1;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 .warning-screen {
@@ -189,12 +209,12 @@ html {
     z-index: 9999;
 }
 
-.warning-screen img{
+.warning-screen img {
     width: 30%;
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 1023.9px) {
+@media only screen and (max-width: 980px) {
 
     #progress-icons-container,
     #scroll-container {
